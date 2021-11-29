@@ -1,0 +1,51 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\13341\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add expresss -S
+
+PATH: 
+  C:\Users\13341\bin;D:\xuexi\Git\mingw64\bin;D:\xuexi\Git\usr\local\bin;D:\xuexi\Git\usr\bin;D:\xuexi\Git\usr\bin;D:\xuexi\Git\mingw64\bin;D:\xuexi\Git\usr\bin;C:\Users\13341\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\13341\AppData\Roaming\npm;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\nodejs;D:\xuexi\Git\cmd;C:\Users\13341\AppData\Local\Microsoft\WindowsApps;D:\xuexi\Microsoft VS Code\bin;C:\Users\13341\AppData\Roaming\npm;D:\Fiddler;D:\IntelliJ IDEA Community Edition 2021.2.3\bin;D:\xuexi\Git\usr\bin\vendor_perl;D:\xuexi\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.11
+
+Node version: 
+  14.5.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile 'C:\Users\13341\AppData\Local\Yarn\Cache\v6\npm-ms-2.1.3-574c8138ce1d2b5861f0b44579dbadd60c6615b2-integrity\node_modules\ms\package.json' -> 'C:\Users\13341\Desktop\project\vite-project\node_modules\needle\node_modules\ms\package.json'
+
+npm manifest: 
+  {
+    "name": "vite-project",
+    "version": "0.0.0",
+    "scripts": {
+      "dev": "vite",
+      "build": "tsc && vite build",
+      "serve": "vite preview"
+    },
+    "dependencies": {
+      "@loadable/component": "^5.15.0",
+      "@types/node": "^16.11.9",
+      "less": "^4.1.2",
+      "react": "^17.0.0",
+      "react-dom": "^17.0.0",
+      "react-router-dom": "^6.0.2"
+    },
+    "devDependencies": {
+      "@types/loadable__component": "^5.13.4",
+      "@types/node": "^16.11.9",
+      "@types/react": "^17.0.0",
+      "@types/react-dom": "^17.0.0",
+      "@vitejs/plugin-react": "^1.0.0",
+      "typescript": "^4.3.2",
+      "vite": "^2.6.4"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
