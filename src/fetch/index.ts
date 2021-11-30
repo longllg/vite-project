@@ -1,16 +1,14 @@
-import axios from 'axios'
+import axios from "axios";
 
-let apiHost = 'http://localhost:8888';
+let apiHost = "http://localhost:8888";
 
-export const prefixPath = '/';
-
-let gwPrefixPath = apiHost ? '/' + prefixPath : prefixPath;
+export const prefixPath = "/test";
 
 export const BASE_CONFIG = {
-    baseURL: apiHost + gwPrefixPath,
-    withCredentials: true,
+  baseURL: apiHost + prefixPath,
+  withCredentials: true,
 };
 
-export { apiHost, gwPrefixPath };
+export { apiHost };
 
 export default axios.create(BASE_CONFIG);
