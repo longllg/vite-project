@@ -16,7 +16,7 @@ const routes: menuProp[] = [
       {
         name: "次页1",
         path: "/home",
-        key: "Show1",
+        key: "Show12",
         component: <Home />,
       },
       {
