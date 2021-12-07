@@ -1,14 +1,40 @@
 .Wrap {
-    display: flex;
+  display: flex;
 }
 .content {
-    background-color: yellow;
-    width: 100%;
+  width: 100%;
 }
 .leftBox {
-    height: 100vh;
-    min-width: 220px;
-    display: flex;
-    flex-direction: column;
-
+  height: 100vh;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  background: #d19a66;
+  margin-right: 12px;
+  box-shadow: 0 0 8px 0;
+  ul {
+    list-style: none;
+    span {
+      display: inline-block;
+      color: red;
+      text-align: left;
+      width: 100%;
+    }
+  }
+  li {
+    list-style: none;
+    margin: 20px 0 0 20px;
+    list-style: none;
+    font-size: 18px;
+    a {
+      color: rgba(0, 255, 213);
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+.link {
+  list-style: none;
+  text-decoration: none;
 }

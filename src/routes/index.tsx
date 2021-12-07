@@ -3,32 +3,32 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { menuProp } from "src/typing";
 const Layout = loadable(() => import("src/layout"));
 const Home = loadable(() => import("src/pages/home"));
-const Show = loadable(() => import("src/pages/show"));
+const React = loadable(() => import("src/pages/react"));
 const Show1 = loadable(() => import("src/pages/show1"));
 const Show2 = loadable(() => import("src/pages/show2"));
 const routes: menuProp[] = [
   {
-    name: "次页",
+    name: "学习篇",
     path: "/",
     key: "Show",
     component: <Layout />,
     children: [
       {
-        name: "次页1",
+        name: "three.js",
         path: "/home",
-        key: "Show1",
+        key: "34343",
         component: <Home />,
       },
       {
-        name: "次页1",
-        path: "/show1",
-        key: "Show1",
-        component: <Show1 />,
+        name: "react",
+        path: "/react",
+        key: "23232",
+        component: <React />,
       },
       {
-        name: "ssdd",
+        name: "vue",
         path: "/show2",
-        key: "Show1",
+        key: "123123124",
         component: <Show2 />,
       },
     ],

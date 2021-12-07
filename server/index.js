@@ -26,12 +26,9 @@ app.all("*", function (req, res, next) {
   res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
   next();
 });
-
+console.log(new Date());
 app.post("/api", (req, res) => {
-  console.log(req.body);
-  setTimeout(() => {
-    res.json(getSuccessJson({ a: 1, v: 2 }));
-  }, 5000);
+  res.json(getSuccessJson({ a: 1, v: 2 }));
 });
 app.listen(8888, (port) => {
   console.log(`服务启动在${8888}`);

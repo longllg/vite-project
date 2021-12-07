@@ -14,6 +14,7 @@ import {
 } from "three";
 
 import { OrbitControls } from "src/utils/OrbitControls.js";
+import useRequest from "src/hooks/useRequest";
 const Home = () => {
   console.log(ShapeUtils, "three");
   const [status, setStatus] = useState<boolean>(true);
@@ -27,7 +28,7 @@ const Home = () => {
     camera = new PerspectiveCamera(
       70,
       window.innerWidth / window.innerHeight,
-      0.01,
+      0.07,
       10
     );
     camera.position.z = 1;
@@ -41,7 +42,7 @@ const Home = () => {
         renderer.render(scene, camera);
       }
     };
-    geometry = new BoxGeometry(0.2, 0.2, 1);
+    geometry = new BoxGeometry(0.2, 0.2, 0.2);
     material = new MeshNormalMaterial();
 
     mesh = new Mesh(geometry, material);
@@ -50,16 +51,16 @@ const Home = () => {
     renderer = new WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setAnimationLoop(animation);
-    document.body.appendChild(renderer.domElement);
+    document.getElementById("#content")?.appendChild(renderer.domElement);
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.addEventListener("change", animation);
   };
 
-  // const { data } = useRequest<any>(getData, { manual: false });
+  const { data } = useRequest<any>(getData, { manual: false });
   useEffect(() => {
     init();
   }, []);
-  return <div className="App">232323</div>;
+  return <div className="App" id="#content"></div>;
 };
 
 export default Home;

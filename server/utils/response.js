@@ -1,7 +1,7 @@
 const getSuccessJson = (data) => {
   return {
     code: 200,
-    data: data,
+    data: { ...data, now: new Date() },
   };
 };
 module.exports = getSuccessJson;
