@@ -283,6 +283,11 @@
   dependencies:
     "@types/react" "*"
 
+"@types/lodash@^4.14.177":
+  version "4.14.177"
+  resolved "https://registry.npmmirror.com/@types/lodash/download/@types/lodash-4.14.177.tgz?cache=0&sync_timestamp=1637266510679&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Flodash%2Fdownload%2F%40types%2Flodash-4.14.177.tgz#f70c0d19c30fab101cad46b52be60363c43c4578"
+  integrity sha512-0fDwydE2clKe9MNfvXHBHF9WEahRuj+msTuQqOmAApNORFvhMYZKNGGJdCzuhheVjMps/ti0Ak/iJPACMaevvw==
+
 "@types/node@^16.11.9":
   version "16.11.11"
   resolved "https://registry.npmmirror.com/@types/node/download/@types/node-16.11.11.tgz#6ea7342dfb379ea1210835bada87b3c512120234"
@@ -313,6 +318,11 @@
   version "0.16.2"
   resolved "https://registry.npmmirror.com/@types/scheduler/download/@types/scheduler-0.16.2.tgz?cache=0&sync_timestamp=1637269065452&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Fscheduler%2Fdownload%2F%40types%2Fscheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
   integrity sha1-GmL4lSVyPd4kuhsBsJK/XfitTTk=
+
+"@types/three@^0.134.0":
+  version "0.134.0"
+  resolved "https://registry.npmmirror.com/@types/three/download/@types/three-0.134.0.tgz#22ae9892f4490faaf35f0ccea127df18407b8ab3"
+  integrity sha512-4YB+99Rgqq27EjiYTItEoZtdjLnTh8W9LxowgpC9eWsjaQJIL4Kn/ZcUKAnW3gB/jS4hqGN8iqmid+RcUZDzpA==
 
 "@vitejs/plugin-react@^1.0.0":
   version "1.1.0"
@@ -355,7 +365,7 @@ axios@^0.24.0:
   dependencies:
     follow-redirects "^1.14.4"
 
-body-parser@1.19.0:
+body-parser@1.19.0, body-parser@^1.19.0:
   version "1.19.0"
   resolved "https://registry.nlark.com/body-parser/download/body-parser-1.19.0.tgz#96b2709e57c9c4e09a6fd66a8fd979844f69f08a"
   integrity sha1-lrJwnlfJxOCab9Zqj9l5hE9p8Io=
@@ -858,6 +868,11 @@ less@^4.1.2:
     needle "^2.5.2"
     source-map "~0.6.0"
 
+lodash@^4.17.21:
+  version "4.17.21"
+  resolved "https://registry.nlark.com/lodash/download/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha1-Z5WRxWTDv/quhFTPCz3zcMPWkRw=
+
 loose-envify@^1.1.0:
   version "1.4.0"
   resolved "https://registry.nlark.com/loose-envify/download/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
@@ -1198,6 +1213,11 @@ supports-color@^5.3.0:
   integrity sha1-4uaaRKyHcveKHsCzW2id9lMO/I8=
   dependencies:
     has-flag "^3.0.0"
+
+three@^0.135.0:
+  version "0.135.0"
+  resolved "https://registry.npmmirror.com/three/download/three-0.135.0.tgz#cff4ec8edd3c51ce9bc7e88d13e8eafed4d0ddfc"
+  integrity sha512-kuEpuuxRzLv0MDsXai9huCxOSQPZ4vje6y0gn80SRmQvgz6/+rI0NAvCRAw56zYaWKMGMfqKWsxF9Qa2Z9xymQ==
 
 to-fast-properties@^2.0.0:
   version "2.0.0"
