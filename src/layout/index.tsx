@@ -31,12 +31,6 @@ const Layout = () => {
             </div>
           );
         })}
-
-        {/* {routes[0]?.children.map((itme) => (
-          <Link to={itme.path} key={itme.key}>
-            {itme.name}
-          </Link>
-        ))} */}
       </div>
       <div className={styles.content}>
         <Outlet />
