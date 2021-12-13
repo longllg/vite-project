@@ -2,12 +2,18 @@ import React, { memo, useState } from "react";
 import styles from "./index.module.less";
 import classnames from "classnames";
 interface Props {
-  type?: "primary" | "Link"; // 按钮类型
+  /** 按钮类型*/
+  type?: "primary" | "Link";
+  /** 是否可用*/
   disbled?: boolean; // 是否可用
+  /** 按钮children*/
   children?: string; // 按钮children
+  /** 是否展示图标*/
   Icon?: React.ReactNode; // 是否展示图标
+  /** 自定义calss*/
   className?: string; // 自定义calss
-  onClick?: (e: any) => void; // 点击事件
+  /** 点击事件*/
+  onClick?: React.MouseEventHandler<HTMLElement>; // 点击事件
 }
 const Button = (prop: Props) => {
   const {

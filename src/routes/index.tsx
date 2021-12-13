@@ -1,11 +1,12 @@
 import loadable from "@loadable/component";
+import { Fragment } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { menuProp } from "src/typing";
 const Layout = loadable(() => import("src/layout"));
 const Home = loadable(() => import("src/pages/home"));
 const React = loadable(() => import("src/pages/react"));
-const Show1 = loadable(() => import("src/pages/show1"));
-const NotFound = loadable(() => import("src/pages/NotFound"));
+const Drag = loadable(() => import("src/pages/drag"));
+const Collect = loadable(() => import("src/pages/collect"));
 const routes: menuProp[] = [
   {
     name: "学习篇",
@@ -26,10 +27,16 @@ const routes: menuProp[] = [
         component: <React />,
       },
       {
-        name: "vue",
+        name: "drag",
         path: "/show2",
         key: "123123124",
-        component: <NotFound />,
+        component: <Drag />,
+      },
+      {
+        name: "collect",
+        path: "/collect",
+        key: "asdsdsd",
+        component: <Collect />,
       },
     ],
   },
@@ -37,7 +44,8 @@ const routes: menuProp[] = [
     path: "*",
     name: "无此页面",
     key: "none",
-    component: <Show1 />,
+    hidden: true,
+    component: <Drag />,
   },
 ];
 const RoutesCofig = (prop: any) => {

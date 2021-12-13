@@ -3,15 +3,22 @@
 }
 .content {
   width: 100%;
+  margin: 24px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+  padding: 24px;
 }
 .leftBox {
   height: 100vh;
+  transition: all 0.2s ease;
+
   min-width: 220px;
   display: flex;
   flex-direction: column;
   background: #d19a66;
   margin-right: 12px;
   box-shadow: 0 0 8px 0;
+  position: relative;
   ul {
     list-style: none;
     span {
@@ -33,6 +40,16 @@
       }
     }
   }
+  .hiddenMenu {
+    position: absolute;
+    bottom: 50px;
+    right: 20px;
+    cursor: pointer;
+  }
+}
+.isHidden {
+  min-width: 20px;
+  transition: all 0.2s ease;
 }
 .link {
   list-style: none;

@@ -16,7 +16,6 @@ import {
 import { OrbitControls } from "src/utils/OrbitControls.js";
 import useRequest from "src/hooks/useRequest";
 const Home = () => {
-  console.log(ShapeUtils, "three");
   const [status, setStatus] = useState<boolean>(true);
   const init = () => {
     let camera: PerspectiveCamera | Camera,
