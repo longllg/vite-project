@@ -3,6 +3,14 @@ const express = require("express");
 const app = new express();
 const bodyParser = require("body-parser");
 const getSuccessJson = require("./utils/response");
+var mysql = require('mysql');
+var connection = mysql.createConnection({
+  host: '121.41.93.134',
+  port:'3306',
+  user: 'longlinguo',
+  password: '!BHbhbhbh520',
+  database: 'my_test'
+});
 // console.log(cors());
 // app.use(cors());
 // app.all("*", function (req, res, next) {
@@ -28,6 +36,16 @@ app.all("*", function (req, res, next) {
 });
 console.log(new Date());
 app.post("/api", (req, res) => {
+
+
+connection.connect();
+
+connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
+    if (error) {
+        console.log(error);
+    };
+    console.log(results);
+});
   res.json(getSuccessJson({ a: 1, v: 2 }));
 });
 app.listen(8888, (port) => {
