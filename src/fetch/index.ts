@@ -1,8 +1,8 @@
-import axios from "axios";
+import axios from 'axios';
 
-let apiHost = "http://localhost:8888";
+let apiHost = 'http://121.41.93.134:6888';
 
-export const prefixPath = "/test";
+export const prefixPath = '/test';
 
 export const BASE_CONFIG = {
   baseURL: apiHost + prefixPath,

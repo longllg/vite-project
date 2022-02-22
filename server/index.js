@@ -1,15 +1,15 @@
-const cors = require("cors");
-const express = require("express");
+const cors = require('cors');
+const express = require('express');
 const app = new express();
-const bodyParser = require("body-parser");
-const getSuccessJson = require("./utils/response");
+const bodyParser = require('body-parser');
+const getSuccessJson = require('./utils/response');
 var mysql = require('mysql');
 var connection = mysql.createConnection({
   host: '121.41.93.134',
-  port:'3306',
+  port: '3306',
   user: 'longlinguo',
   password: '!BHbhbhbh520',
-  database: 'my_test'
+  database: 'my_test',
 });
 // console.log(cors());
 // app.use(cors());
@@ -26,26 +26,23 @@ var connection = mysql.createConnection({
 // });
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.all("*", function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "http://localhost:9888");
-  res.header("Access-Control-Allow-Credentials", true);
-  res.header("Access-Control-Allow-Headers", "Content-Type");
-  res.header("Content-Type", "application/json;charset=utf-8");
-  res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
+app.all('*', function (req, res, next) {
+  res.header('Access-Control-Allow-Origin', 'http://localhost:9888');
+  res.header('Access-Control-Allow-Credentials', true);
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  res.header('Content-Type', 'application/json;charset=utf-8');
+  res.header('Access-Control-Allow-Methods', 'PUT,POST,GET,DELETE,OPTIONS');
   next();
 });
 console.log(new Date());
-app.post("/api", (req, res) => {
-
-
-connection.connect();
-
-connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
+app.post('/api', (req, res) => {
+  connection.connect();
+  connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
     if (error) {
-        console.log(error);
-    };
+      console.log(error);
+    }
     console.log(results);
-});
+  });
   res.json(getSuccessJson({ a: 1, v: 2 }));
 });
 app.listen(8888, (port) => {
