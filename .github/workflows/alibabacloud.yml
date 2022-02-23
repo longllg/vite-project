@@ -72,6 +72,6 @@ jobs:
           # 6. pm2.config.json 是 启动 项目，( npm start )
         script: |
           cd /www/wwwroot/my-project
-          wget https://github.com/longllg/vite-project/releases/latest/download/release.tgz -O release.tgz/
+          wget https://github.com/longllg/vite-project/archive/refs/tags/refs/heads/main.tar.gz
           tar zxvf release.tgz
           npm install --production
