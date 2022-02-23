@@ -15,7 +15,8 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "./"
+    "baseUrl": "./",
   },
-  "include": ["src", "typings", "src/componets"]
+  "include": ["src", "typings", "src/componets"],
+  "files":["global.d.ts"]
 }

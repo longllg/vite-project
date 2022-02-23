@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.less";
 import Home from "src/pages/home";
-import { RoutesCofig } from "src/routes";
+import { RoutesCofig } from "./routes/index";
 function App() {
   const [count, setCount] = useState(0);
 
