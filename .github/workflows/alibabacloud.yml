@@ -73,5 +73,5 @@ jobs:
         script: |
           cd /www/wwwroot/my-project
           wget https://github.com/longllg/vite-project/archive/refs/tags/refs/heads/main.tar.gz
-          tar zxvf release.tgz
+          tar zxvf main.tar.gz
           npm install --production
