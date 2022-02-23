@@ -61,7 +61,7 @@ jobs:
       with:
         host: ${{ secrets.HOST }} # 公网 IP 或 域名
         username: ${{ secrets.USERNAME }} # 登录名
-        password: ${{ secrets.PASSWORD }} # 密码
+        password: ${{ secrets.TOKEN }} # 密码
         port: ${{ secrets.PORT }} # 端口
         # 类似在服务端的终端-执行以下操作
           # 1. 找到需要存放文件的地方
