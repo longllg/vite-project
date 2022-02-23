@@ -59,9 +59,9 @@ jobs:
     - name: Deploy
       uses: appleboy/ssh-action@master
       with:
-        host: '121.41.93.134'
-        username: 'root' # 登录名
-        password: '!BHbhbhbh520'
+        host: '${{ secrets.HOST }}'
+        username: '${{ secrets.USERNAME }}' # 登录名
+        password: '${{ secrets.PASSWORD }}'
         port: 22
         # 类似在服务端的终端-执行以下操作
           # 1. 找到需要存放文件的地方
