@@ -5,7 +5,6 @@ const Layout = loadable(() => import("src/layout"));
 const Home = loadable(() => import("src/pages/home"));
 const React = loadable(() => import("src/pages/react"));
 const Show1 = loadable(() => import("src/pages/show1"));
-const NotFound = loadable(() => import("src/pages/NotFound"));
 const routes: menuProp[] = [
   {
     name: "学习篇",
@@ -29,7 +28,7 @@ const routes: menuProp[] = [
         name: "vue",
         path: "/show2",
         key: "123123124",
-        component: <NotFound />,
+        component: <React />,
       },
     ],
   },
