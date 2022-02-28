@@ -27,7 +27,7 @@ jobs:
     - run: npm install
     - run: npm run build
     # 将这些 .nuxt static nuxt.config.js package.json package-lock.json pm2.config.json 文件打包在 release.tgz 中
-     # 此处是为了在方便，在服务器中直接解压，获得所有文件，无需单独传呜呜呜
+     # 此处是为了在方便，在服务器中直接解压，获得所有文件，无需单独传
      # pm2 帮助我们在 Node服务器，启动项目的一个工具，具体可查看官网 https://github.com/Unitech/pm2
 #     - run: tar -zcvf release.tgz .nuxt static nuxt.config.js package.json package-lock.json pm2.config.json
  
