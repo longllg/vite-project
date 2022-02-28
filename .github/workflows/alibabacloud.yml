@@ -74,8 +74,7 @@ jobs:
           # 6. pm2.config.json 是 启动 项目，( npm start )
         script: |
           cd /www/wwwroot/my-project
-          git clone https://github.com/longllg/vite-project.git
-          cd vite-project
+          cd vite-project && git pull || git clone https://github.com/longllg/vite-project.git
           npm install --production
           npm run build
           
