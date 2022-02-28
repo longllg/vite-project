@@ -4,6 +4,8 @@ name: Publish And Deploy Demo
 # 触发部署的条件: 当 master 分支, 有 push 的操作, 即可触发。
 on:
   push:
+    tags:
+      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
     branches: # 此处不仅限于监听分支, 还可监听 tag
       - main
     paths-ignore: # 下列文件的变更不触发部署，可以自行添加
@@ -31,29 +33,29 @@ jobs:
  
     # 发布版本 Release
       # 与 Github 建立连接( 此处用于将 release.tgz 上传到 github 上 )
-#     - name: Create Release
-#       id: create_release
-#       uses: actions/create-release@main
-#       env:
-#         GITHUB_TOKEN: ${{ secrets.TOKEN }}
-#       with:
-#         tag_name: ${{ github.ref }}
-#         release_name: Release ${{ github.ref }}
-#         draft: false
-#         prerelease: false
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@main
+      env:
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        draft: false
+        prerelease: false
  
-#     # 上传构建结果到 Release
-#        # 将 release.tgz 上传到 github 上
-#     - name: Upload Release Asset
-#       id: upload-release-asset
-#       uses: actions/upload-release-asset@main
-#       env:
-#         GITHUB_TOKEN: ${{ secrets.TOKEN }}
-#       with:
-#         upload_url: ${{ steps.create_release.outputs.upload_url }}
-#         asset_path: ./release.tgz
-#         asset_name: release.tgz
-#         asset_content_type: application/x-tgz
+    # 上传构建结果到 Release
+       # 将 release.tgz 上传到 github 上
+    - name: Upload Release Asset
+      id: upload-release-asset
+      uses: actions/upload-release-asset@main
+      env:
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./release.tgz
+        asset_name: release.tgz
+        asset_content_type: application/x-tgz
  
     # 部署到服务器
     - name: Deploy
