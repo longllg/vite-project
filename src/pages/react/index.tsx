@@ -33,7 +33,7 @@ const ReactDemo = (prop: any) => {
         真的是按钮
       </Button>
       <Link to="/show/show2">23234</Link>
-      <Link to="/show/show1">sss</Link>
+      <Link to="/show/show1">sss啊哈哈哈 成功了</Link>
       <Outlet />
     </div>
   );
