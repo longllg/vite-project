@@ -39,6 +39,7 @@ const routes: menuProp[] = [
     component: <Show1 />,
   },
 ];
+// 啊不会吧
 const RoutesCofig = (prop: any) => {
   console.log(prop, "prop");
   return (
