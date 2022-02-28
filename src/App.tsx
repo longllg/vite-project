@@ -3,7 +3,7 @@ import "./App.less";
 import Home from "src/pages/home";
 import { RoutesCofig } from "src/routes";
 function App() {
-  const [count, setCount] = useState('w');
+  const [count, setCount] = useState('wf');
 
   return (
     <div className="App">
