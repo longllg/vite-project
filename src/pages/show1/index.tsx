@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 function Show() {
     return (
         <div className="App">
-            show1232323344
+            真的成功了么
         </div>
     )
 }
