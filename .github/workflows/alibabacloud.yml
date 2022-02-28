@@ -76,6 +76,7 @@ jobs:
           cd /www/wwwroot/my-project
           cd vite-project && git pull 
           npm install --production
+          rm -rf /www/wwwroot/my-project/dist
           npm run build
           
           
