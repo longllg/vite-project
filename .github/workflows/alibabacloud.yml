@@ -35,6 +35,7 @@ jobs:
       # 与 Github 建立连接( 此处用于将 release.tgz 上传到 github 上 )
     - name: Get Version
       id: get_version
+      run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
     - name: Create Release
       id: create_release
       uses: actions/create-release@main
