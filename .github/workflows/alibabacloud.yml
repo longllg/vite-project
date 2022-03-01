@@ -33,17 +33,17 @@ jobs:
  
     # 发布版本 Release
       # 与 Github 建立连接( 此处用于将 release.tgz 上传到 github 上 )
-#     - name: Create Release
-#       id: create_release
-#       uses: actions/create-release@main
-#       env:
-#         GITHUB_TOKEN: ${{ secrets.TOKEN }}
-#       with:
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@main
+      env:
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      with:
+        script: echo ${{github}}
 #         tag_name: ${{ github.ref }}
 #         release_name: Release ${{ github.ref }}
 #         draft: false
 #         prerelease: false
- 
     # 上传构建结果到 Release
        # 将 release.tgz 上传到 github 上
 #     - name: Upload Release Asset
@@ -58,25 +58,25 @@ jobs:
 #         asset_content_type: application/x-tgz
  
     # 部署到服务器
-    - name: Deploy
-      uses: appleboy/ssh-action@master
-      with:
-        host: '${{ secrets.HOST }}'
-        username: '${{ secrets.USERNAME }}' # 登录名
-        password: '${{ secrets.PASSWORD }}'
-        port: '${{ secrets.PORT }}'
-        # 类似在服务端的终端-执行以下操作
-          # 1. 找到需要存放文件的地方
-          # 2. 从 Github 上将 release.tgz 复制一份放入文件内
-          # 3. 解压 release.tgz 文件
-          # 4. 安装插件
-          # 5. 重启 pm2, 并执行 pm2.config.json 内操作，
-          # 6. pm2.config.json 是 启动 项目，( npm start )
-        script: |
-          cd /www/wwwroot/my-project
-          cd vite-project && git pull 
-          npm install --production
-          rm -rf /www/wwwroot/my-project/dist
-          npm run build
+#     - name: Deploy
+#       uses: appleboy/ssh-action@master
+#       with:
+#         host: '${{ secrets.HOST }}'
+#         username: '${{ secrets.USERNAME }}' # 登录名
+#         password: '${{ secrets.PASSWORD }}'
+#         port: '${{ secrets.PORT }}'
+#         # 类似在服务端的终端-执行以下操作
+#           # 1. 找到需要存放文件的地方
+#           # 2. 从 Github 上将 release.tgz 复制一份放入文件内
+#           # 3. 解压 release.tgz 文件
+#           # 4. 安装插件
+#           # 5. 重启 pm2, 并执行 pm2.config.json 内操作，
+#           # 6. pm2.config.json 是 启动 项目，( npm start )
+#         script: |
+#           cd /www/wwwroot/my-project
+#           cd vite-project && git pull 
+#           npm install --production
+#           rm -rf /www/wwwroot/my-project/dist
+#           npm run build
           
           
