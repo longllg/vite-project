@@ -33,13 +33,15 @@ jobs:
  
     # 发布版本 Release
       # 与 Github 建立连接( 此处用于将 release.tgz 上传到 github 上 )
+    - name: Get Version
+      id: get_version
     - name: Create Release
       id: create_release
       uses: actions/create-release@main
       env:
         GITHUB_TOKEN: ${{ secrets.TOKEN }}
       with:
-        script: echo ${{ github.tag_name }}
+        script: echo ${{ steps.get_version.outputs.VERSION }}
 #         tag_name: ${{ github.ref }}
 #         release_name: Release ${{ github.ref }}
 #         draft: false
