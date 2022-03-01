@@ -1,0 +1,17 @@
+  {
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 error pnpm": {
+    "errno": -4058,
+    "code": "ENOENT",
+    "syscall": "mkdir",
+    "path": "C:\\Users\\newrank\\Desktop\\vite-project\\C:Program\\v3",
+    "err": {
+      "name": "pnpm",
+      "message": "ENOENT: no such file or directory, mkdir 'C:\\Users\\newrank\\Desktop\\vite-project\\C:Program\\v3'",
+      "code": "ENOENT",
+      "stack": "pnpm: ENOENT: no such file or directory, mkdir 'C:\\Users\\newrank\\Desktop\\vite-project\\C:Program\\v3'"
+    }
+  }
+}
