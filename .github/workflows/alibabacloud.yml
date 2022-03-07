@@ -56,13 +56,13 @@ jobs:
           asset_content_type: application/x-tgz
 
       # 部署到服务器
-      - name: Deploy
-        uses: appleboy/ssh-action@master
-        with:
-          host: "${{ secrets.HOST }}"
-          username: "${{ secrets.USERNAME }}" # 登录名
-          password: "${{ secrets.PASSWORD }}"
-          port: "${{ secrets.PORT }}"
+#       - name: Deploy
+#         uses: appleboy/ssh-action@master
+#         with:
+#           host: "${{ secrets.HOST }}"
+#           username: "${{ secrets.USERNAME }}" # 登录名
+#           password: "${{ secrets.PASSWORD }}"
+#           port: "${{ secrets.PORT }}"
           # 类似在服务端的终端-执行以下操作
           # 1. 找到需要存放文件的地方
           # 2. 从 Github 上将 release.tgz 复制一份放入文件内
@@ -74,7 +74,7 @@ jobs:
           # npm install --production
           # rm -rf /www/wwwroot/my-project/dist
           # npm run build
-          script: |
-            cd /www/wwwroot/my-project
-            wget https://github.com/longllg/vite-project/releases/latest/download/release.tgz -${{ github.ref }} release.tgz/
-            tar zxvf release.tgz
+#           script: |
+#             cd /www/wwwroot/my-project
+#             wget https://github.com/longllg/vite-project/releases/latest/download/release.tgz -${{ github.ref }} release.tgz/
+#             tar zxvf release.tgz
